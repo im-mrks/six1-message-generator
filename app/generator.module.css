@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+}
+
+.navbar {
+  display: flex;
+}
+
+.body {
+  padding-top: 1em;
+  display: flex;
+  border-radius: 0 0.5em 0.5em 0.5em;
+  transition: background 0.3s ease-out;
+  background: rgb(var(--color-mode-light));
+  z-index: 1;
+  position: relative;
+}
+
+.body.primary {
+  --color-mode: var(--color-primary);
+  --color-mode-light: var(--color-primary-light);
+}
+
+.body.secondary {
+  --color-mode: var(--color-secondary);
+  --color-mode-light: var(--color-secondary-light);
+}
+
+.left {
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 50%;
+}
+
+.right {
+  padding-bottom: 1em;
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .body {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .right {
+    width: 100%;
+  }
+}
